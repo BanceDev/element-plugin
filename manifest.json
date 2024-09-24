@@ -1,0 +1,27 @@
+{
+  "manifest_version": 2,
+  "name": "Element",
+  "version": "1.0.0",
+  "description": "Browser extension based on element css for better html default styles",
+  "permissions": [
+      "tabs",
+      "activeTab",
+      "storage",
+      "scripting"
+  ],
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "css": [],
+      "js": ["element.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "icons": {
+    "48": "icon.png"
+  }
+}
